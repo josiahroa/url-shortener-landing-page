@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     width: 80%;
     height: 100px;
