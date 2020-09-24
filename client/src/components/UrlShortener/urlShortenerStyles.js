@@ -30,10 +30,15 @@ export const UrlShortener = styled.div`
 `;
 
 export const Shortened = styled.div`
-    margin: 20px 0;
+    margin: 20px auto;
     background-color: white;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-    padding: 5px 20px;
+    padding: 10px 20px;
+    .right { 
+        display: flex;
+        align-items: center;
+    }
 `;

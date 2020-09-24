@@ -9,15 +9,15 @@ export const Body = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    .shortened-container {
-        max-width: 1100px;
-        width: 90%;
-        position: absolute;
-        top: 60px;
-    }
+    
 `;
 
-export const Wrapper = styled.div`
+export const BodyWrapper = styled.div`
+    max-width: 1100px;
     width: 80%;
     margin: 0 auto;
+    .shortened-container {
+        margin-top: 80px;
+        width: 100%;
+    }
 `;

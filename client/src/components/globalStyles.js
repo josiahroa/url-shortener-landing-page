@@ -6,29 +6,54 @@ export const Link = styled.a`
     font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.body};
     color: ${theme.colors.neutral.grey};
+    ${props => props.color === 'black' && `
+        color: black;
+    `}
+    ${props => props.color === 'primary' && `
+        color: ${theme.colors.primary.cyan};
+    `}
     cursor: pointer;
     &:hover{
         color: black;
+        ${props => props.color === 'black' && `
+            color: ${theme.colors.neutral.grey};
+        `}
         transition: .5s ease;
     }
 `;
 
 export const Button = styled.div`
     padding: 7px 20px;
+    ${props => props.width && `
+        padding: 0;
+        width: ${props.width};
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    `}
     border-radius: ${props => !props.round ? '30px' : '5px'};
     background-color: ${theme.colors.primary.cyan};
     border: 1px solid ${theme.colors.primary.cyan};
+    ${props => props.selected && `
+        background-color: ${theme.colors.primary.dark_violet};
+        border: 1px solid ${theme.colors.primary.dark_violet};
+    `}
     color: white;
     font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.body};
     font-weight: 500;
     text-align: center;
-    cursor: pointer;
     &:hover{
-        background-color: transparent;
-        color: ${theme.colors.primary.cyan};
-        border: 1px solid ${theme.colors.primary.cyan};
-        transition: .5s ease;
+        ${props => props.selected ? `
+            user-select: none;
+        ` : `
+            cursor: pointer;
+            background-color: transparent;
+            color: ${theme.colors.primary.cyan};
+            border: 1px solid ${theme.colors.primary.cyan};
+            transition: .5s ease;
+        `};
     }
 `;
 
