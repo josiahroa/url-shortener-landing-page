@@ -77,6 +77,15 @@ export const H3 = styled.h3`
     margin: 20px 0;
 `;
 
+export const H6 = styled.h6`
+    font-family: ${theme.font.family};
+    font-size: ${theme.font.sizes.body};
+    margin: 20px 0;
+    ${props => props.color && `
+        color: ${props.color};
+    `}
+`;
+
 export const Text = styled.p`
     font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.body};
