@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
 import Body from './components/Body/Body';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Nav/>
       <Header/>
       <Body/>
+      <Footer/>
     </div>
   );
 }
