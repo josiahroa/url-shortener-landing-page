@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import UrlShortener from '../UrlShortener/UrlShortener';
 import Shortened from '../UrlShortener/Shortened';
+import Info from './Info';
 import { Body, BodyWrapper } from './bodyStyles';
+import { H2, Text } from '../globalStyles';
 
 export default () => {
 
@@ -23,7 +25,6 @@ export default () => {
         setNewUrls([...newUrls, newUrl]);
     }
 
-
     return (
         <Body>
             <BodyWrapper>
@@ -38,8 +39,12 @@ export default () => {
                                 />
                     })}
                 </div>
+                <div className='flex-wrapper'>
+                    <H2>Advanced Statistcs</H2>
+                    <Text color='grey-violet'>Track how your links are performing across the web with our advanced statistcs dashboard.</Text>
+                </div>
+                <Info/>
             </BodyWrapper>
-            
         </Body>
     ); 
 }

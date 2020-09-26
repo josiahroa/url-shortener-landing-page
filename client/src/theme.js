@@ -11,14 +11,15 @@ export default {
             grey: 'hsl(0, 0%, 75%)',
             grey_violet: 'hsl(257, 7%, 63%)',
             very_dark_blue: 'hsl(255, 11%, 22%)',
-            very_dark_violet: 'hsl(260, 8%, 14%)'
+            very_dark_violet: 'hsl(260, 8%, 14%)',
+            grey_blue: 'hsl(227, 18%, 88%)'
         }
     },
     font: {
         sizes: {
             body: '18px',
             h1: '60px',
-            h2: '',
+            h2: '35px',
             h3: '',
             h4: ''
         },

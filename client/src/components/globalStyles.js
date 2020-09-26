@@ -62,10 +62,25 @@ export const H1 = styled.h1`
     font-size: ${theme.font.sizes.h1};
 `;
 
+export const H2 = styled.h2`
+    font-family: ${theme.font.family};
+    font-size: ${theme.font.sizes.h2};
+    margin: 20px 0;
+    ${props => props.color && `
+        color: ${props.color};
+    `};
+`;
+
+export const H3 = styled.h3`
+    font-family: ${theme.font.family};
+    font-size: 25px;
+    margin: 20px 0;
+`;
+
 export const Text = styled.p`
     font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.body};
-    color: ${theme.colors.neutral.grey};
+    color: ${props => props.color === 'grey-violet' ? theme.colors.neutral.grey_violet : theme.colors.neutral.grey};
 `;
 
 export const Input = styled.input`
