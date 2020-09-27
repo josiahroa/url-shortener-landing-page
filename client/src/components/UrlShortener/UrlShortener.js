@@ -35,6 +35,9 @@ export default ({updateUrls}) => {
 
     return (
         <UrlShortener>
+            <div className='error-wrapper'>
+                <Error>{error}</Error>
+            </div>
             <div className='input-wrapper'>
                 <Input 
                     placeholder='Shorten a link here...'
@@ -42,12 +45,11 @@ export default ({updateUrls}) => {
                     onChange={handleChange}
                     error={error.length > 0}
                 />
-                <Button round='false' onClick={handleSubmit}>
-                    <p>Shorten It!</p>
-                </Button>
-            </div>
-            <div className='error-wrapper'>
-                <Error>{error}</Error>
+                <div className='btn-wrapper'>
+                    <Button round='false' width='150px' fullWidth={true} onClick={handleSubmit}>
+                        <p>Shorten It!</p>
+                    </Button>
+                </div>
             </div>
         </UrlShortener>
     );

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Nav } from './navStyles';
 import { Link, Button } from '../globalStyles';
 import logo from '../../assets/logo.svg';
+import Hamburger from './Hamburger';
 
 export default () => {
+
+    const [hover, setHover] = useState(false);
+    const [visible, setVisible] = useState(false);
+    
     return (
         <Nav>
             <div className='left'>
@@ -14,13 +19,21 @@ export default () => {
                     <Link>Resources</Link>
                 </div>
             </div>
-            <div className='right'>
-                <div style={{ width: '170px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div 
+                className='right'
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                onClick={() => setVisible(!visible)}
+            >
+                <div className='btn-container'>
                     <Link>Login</Link>
                     <Button>
                         <p>Sign Up</p>
                     </Button>
                 </div>
+                <Hamburger 
+                    hover={hover}
+                />
             </div>
         </Nav>
     )

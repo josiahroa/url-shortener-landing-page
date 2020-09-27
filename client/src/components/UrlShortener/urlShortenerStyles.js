@@ -21,11 +21,27 @@ export const UrlShortener = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .btn-wrapper {
+            margin-left: 20px;
+            ${theme.breakpoints.tablet} {
+                margin: 0;
+                width: 100%;
+            }
+        }
+        ${theme.breakpoints.tablet} {
+            flex-direction: column;
+            margin-top: 0;
+            height: 88px;
+            justify-content: space-between;
+        }
     }
     .error-wrapper {
         width: 90%;
         margin: 0 auto;
-        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    ${theme.breakpoints.tablet} {
+        justify-content: center;
     }
 `;
 
@@ -40,5 +56,21 @@ export const Shortened = styled.div`
     .right { 
         display: flex;
         align-items: center;
+        .new-link {
+            margin-right: 10px;
+            ${theme.breakpoints.tablet} {
+                margin: 10px 0;
+            }
+        }
+        ${theme.breakpoints.tablet} {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+    ${theme.breakpoints.tablet} {
+        flex-direction: column;
+        align-items: flex-start;
     }
 `;

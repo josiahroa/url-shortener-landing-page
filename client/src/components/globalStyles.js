@@ -31,6 +31,9 @@ export const Button = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        ${theme.breakpoints.tablet} {
+            width: 100%;
+        }
     `}
     border-radius: ${props => !props.round ? '30px' : '5px'};
     background-color: ${theme.colors.primary.cyan};
@@ -55,6 +58,11 @@ export const Button = styled.div`
             transition: .5s ease;
         `};
     }
+    ${props => props.fullWidth && !props.width && `
+        ${theme.breakpoints.tablet} {
+            width: calc(100% - 40px);
+        }
+    `}
 `;
 
 export const H1 = styled.h1`
@@ -94,10 +102,9 @@ export const Text = styled.p`
 
 export const Input = styled.input`
     height: 40px;
-    // border: 0;
     outline: none;
     border-radius: 5px;
-    width: 80%;
+    width: calc(100% - 20px);
     padding-left: 20px;
     border: 1px solid ${props => props.error ? theme.colors.secondary.red : 'white'};
     ::placeholder{
