@@ -7,12 +7,13 @@ export default ({newUrl, copied, setCopied}) => {
         <Shortened>
             <Link color='black'>{newUrl.url}</Link>
             <div className='right'>
-                <div style={{ marginRight: '10px' }}>
+                <div className='new-link'>
                     <Link color='primary'>{`https://rel.ink/${newUrl.hashid}`}</Link>
                 </div>
                 <Button 
                     round='false' 
                     width='100px'
+                    fullWidth={true}
                     selected={copied === newUrl.hashid}
                     onClick={() => setCopied(newUrl.hashid)}
                 >

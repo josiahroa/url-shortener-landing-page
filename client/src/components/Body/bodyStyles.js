@@ -37,6 +37,10 @@ export const Info = styled.div`
     display: flex;
     justify-content: space-between;
     position: relative;
+    ${theme.breakpoints.lg_desktop} {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const Card = styled.div`
@@ -48,6 +52,9 @@ export const Card = styled.div`
     position: relative;
     ${props => props.marginTop && `
         margin-top: ${props.marginTop};
+        ${theme.breakpoints.lg_desktop} { 
+            margin-top: 60px;
+        }
     `}
     .img-wrapper {
         width: 70px;
@@ -74,4 +81,8 @@ export const Bar = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    ${theme.breakpoints.lg_desktop} {
+        height: 100%;
+        width: 10px;
+    }
 `;
