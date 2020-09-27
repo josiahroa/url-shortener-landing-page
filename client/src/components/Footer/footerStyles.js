@@ -14,12 +14,12 @@ export const CTABar = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 `;
 
 export const Base = styled.section`
     background-color: ${theme.colors.neutral.very_dark_violet};
     width: 100%;
-    height: 200px;
     padding: 30px 0;
     .base-wrapper {
         max-width: 1100px;
@@ -32,6 +32,10 @@ export const Base = styled.section`
         img {
             margin-top: 20px;
         }
+        ${theme.breakpoints.tablet} {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 `;
 
@@ -42,6 +46,13 @@ export const LinkContainer = styled.div`
         display: flex;
         flex-direction: column;
         margin: 0 30px;
+        ${theme.breakpoints.tablet} {
+            align-items: center;
+        }
+    }
+    ${theme.breakpoints.tablet} {
+        flex-direction: column;
+        align-items: center;
     }
 `;
 

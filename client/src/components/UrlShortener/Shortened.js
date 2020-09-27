@@ -13,6 +13,7 @@ export default ({newUrl, copied, setCopied}) => {
                 <Button 
                     round='false' 
                     width='100px'
+                    height='30px'
                     fullWidth={true}
                     selected={copied === newUrl.hashid}
                     onClick={() => setCopied(newUrl.hashid)}

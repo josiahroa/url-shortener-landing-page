@@ -16,7 +16,7 @@ export default () => {
     return (
         <Base>
             <div className='base-wrapper'>
-                <img src={logo}/>
+                <img src={logo} alt='Shortly'/>
                 <LinkContainer>
                     <div className='link-wrapper'>
                         <H6 color='white'>Features</H6>
@@ -31,7 +31,7 @@ export default () => {
                         <FooterLink>Support</FooterLink>
                     </div>
                     <div className='link-wrapper'>
-                        <H6 color='white'>Resources</H6>
+                        <H6 color='white'>Company</H6>
                         <FooterLink>About</FooterLink>
                         <FooterLink>Our Team</FooterLink>
                         <FooterLink>Careers</FooterLink>

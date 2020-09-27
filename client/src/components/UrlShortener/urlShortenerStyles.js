@@ -11,6 +11,7 @@ export const UrlShortener = styled.div`
     top: -60px;
     height: 120px;
     background-image: url(${bgImage});
+    background-size: cover;
     background-color: ${theme.colors.primary.dark_violet};
     display: flex;
     flex-direction: column;
@@ -25,14 +26,15 @@ export const UrlShortener = styled.div`
             margin-left: 20px;
             ${theme.breakpoints.tablet} {
                 margin: 0;
+                margin-top: 20px;
                 width: 100%;
             }
         }
         ${theme.breakpoints.tablet} {
             flex-direction: column;
             margin-top: 0;
-            height: 88px;
-            justify-content: space-between;
+            // height: 88px;
+            // justify-content: space-between;
         }
     }
     .error-wrapper {
@@ -42,6 +44,8 @@ export const UrlShortener = styled.div`
     }
     ${theme.breakpoints.tablet} {
         justify-content: center;
+        height: 200px;
+        top: -100px;
     }
 `;
 

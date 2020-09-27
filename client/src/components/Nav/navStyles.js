@@ -55,3 +55,27 @@ export const Bar = styled.div`
     margin: 10px 0;
     transition: .5s ease;
 `;
+
+export const Dropdown = styled.div`
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 250px;
+    background-color: ${theme.colors.primary.dark_violet};
+    z-index: 2;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    display: ${props => props.visible ? 'flex' : 'none'};
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .divider {
+        width: 90%;
+        height: 1px;
+        background-color: ${theme.colors.neutral.grey};
+        opacity: 0.2;
+    }
+    .btn-wrapper {
+        width: 90%;
+    }
+`;
