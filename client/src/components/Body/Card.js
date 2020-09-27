@@ -6,7 +6,7 @@ export default ({ title, body, img, marginTop }) => {
     return (
         <Card marginTop={marginTop}>
             <div className='img-wrapper'>
-                <img src={img}/>
+                <img src={img} alt={title}/>
             </div>
             <div className='content-wrapper'>
                 <H3>{title}</H3>

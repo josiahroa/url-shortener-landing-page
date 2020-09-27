@@ -3,6 +3,7 @@ import { Nav } from './navStyles';
 import { Link, Button } from '../globalStyles';
 import logo from '../../assets/logo.svg';
 import Hamburger from './Hamburger';
+import Dropdown from './Dropdown';
 
 export default () => {
 
@@ -35,6 +36,10 @@ export default () => {
                     hover={hover}
                 />
             </div>
+            <Dropdown
+                visible={visible}
+                setVisible={setVisible}
+            />
         </Nav>
     )
 }

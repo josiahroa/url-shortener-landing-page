@@ -31,6 +31,6 @@ export default {
         lg_desktop: '@media (max-width: 1336px)',
         sm_desktop: '@media (max-width: 1158px)',
         tablet: '@media (max-width: 998px)',
-        phone: '@media (max-width: 500px)'
+        phone: '@media (max-width: 600px)'
     }
 }

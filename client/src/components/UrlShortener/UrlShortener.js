@@ -46,7 +46,13 @@ export default ({updateUrls}) => {
                     error={error.length > 0}
                 />
                 <div className='btn-wrapper'>
-                    <Button round='false' width='150px' fullWidth={true} onClick={handleSubmit}>
+                    <Button 
+                        round='false' 
+                        width='150px' 
+                        height='40px'
+                        fullWidth={true} 
+                        onClick={handleSubmit}
+                    >
                         <p>Shorten It!</p>
                     </Button>
                 </div>

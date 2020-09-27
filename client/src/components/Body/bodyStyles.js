@@ -19,6 +19,9 @@ export const BodyWrapper = styled.div`
     .shortened-container {
         margin-top: 80px;
         width: 100%;
+        ${theme.breakpoints.tablet} {
+            margin-top: 120px;
+        }
     }
     .flex-wrapper {
         margin: 80px auto;
@@ -27,7 +30,7 @@ export const BodyWrapper = styled.div`
         justify-content: center;
         algin-items: center;
         text-align: center;
-        width: 460px;
+        max-width: 460px;
         line-height: 30px;
     }
 `;
@@ -70,6 +73,9 @@ export const Card = styled.div`
     .content-wrapper {
         margin-top: 40px;
         line-height: 25px;
+    }
+    ${theme.breakpoints.phone} {
+        width: 250px;
     }
 `;
 
